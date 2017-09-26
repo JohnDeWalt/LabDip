@@ -23,8 +23,8 @@ public class BaggageServiceTipCalculator {
 //    }
 //    private ServiceQuality serviceQuality;
 
-    public BaggageServiceTipCalculator(ServiceQuality q, int bags) {
-        this.setServiceRating(q); // perform validation
+    public BaggageServiceTipCalculator( int bags) {
+         // perform validation
         this.setBagCount(bags);
 
         baseTipPerBag = 1.00; // set default value
@@ -33,29 +33,29 @@ public class BaggageServiceTipCalculator {
     public double getTipForBaggeHandler() {
         double tip = 0.00; // always initialize local variables
 
-        switch(serviceQuality) {
-            case GOOD:
-                tip = baseTipPerBag * bagCount * (1 + GOOD_RATE);
-                break;
-            case FAIR:
-                tip = baseTipPerBag * bagCount * (1 + FAIR_RATE);
-                break;
-            case POOR:
-                tip = baseTipPerBag * bagCount * (1 + POOR_RATE);
-                break;
-        }
+//        switch(serviceQuality) {
+//            case GOOD:
+//                tip = baseTipPerBag * bagCount * (1 + GOOD_RATE);
+//                break;
+//            case FAIR:
+//                tip = baseTipPerBag * bagCount * (1 + FAIR_RATE);
+//                break;
+//            case POOR:
+//                tip = baseTipPerBag * bagCount * (1 + POOR_RATE);
+//                break;
+//        }
 
         return tip;
     }
 
-    public final void setServiceRating(ServiceQuality q) {
-        // No need to validate because enums provide type safety!
-        serviceQuality = q;
-    }
+//    public final void setServiceRating(ServiceQuality q) {
+//        // No need to validate because enums provide type safety!
+//        serviceQuality = q;
+//    }
 
-    public ServiceQuality getServiceQuality() {
-        return serviceQuality;
-    }
+//    public ServiceQuality getServiceQuality() {
+//        return serviceQuality;
+//    }
 
     public int getBagCount() {
         return bagCount;
