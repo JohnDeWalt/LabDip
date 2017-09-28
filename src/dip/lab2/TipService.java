@@ -26,6 +26,7 @@ public class TipService {
     }
 
     public void setClac(TipCalculator calc) {
+        
         this.calc = calc;
     }
 }

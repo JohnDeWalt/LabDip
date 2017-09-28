@@ -22,7 +22,7 @@ public class Startup {
         TipService tipService = new TipService(calc);
         double tip = tipService.calcTip();
         
-        System.out.println("The tip is " + tip);
+        System.out.println("The tip is " + tip + "dollars");
         
     }
 

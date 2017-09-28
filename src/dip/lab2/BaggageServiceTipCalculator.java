@@ -23,7 +23,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
         return bagCount * baseTipPerBag;
     }
 
-    public int getBagCount() {
+    public final int getBagCount() {
         return bagCount;
     }
     public void setBagCount(int bagCount) {
@@ -34,11 +34,11 @@ public class BaggageServiceTipCalculator implements TipCalculator {
         this.bagCount = bagCount;
     }
 
-    public double getBaseTipPerBag() {
+    public final double getBaseTipPerBag() {
         return baseTipPerBag;
     }
 
-    public void setBaseTipPerBag(double baseTipPerBag) {
+    public final void setBaseTipPerBag(double baseTipPerBag) {
         if(baseTipPerBag < 0) {
             throw new IllegalArgumentException(
                     "error: base tip must be greater than or equal to 0");
