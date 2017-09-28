@@ -21,15 +21,28 @@ public class FoodServiceTipCalculator implements TipCalculator {
         this.billAmt = billAmt;
         this.tipPercent = tipPercent;
     }
+
+    public double getTipPercent() {
+        return tipPercent;
+    }
+
+    public void setTipPercent(double tipPercent) {
+        if(tipPercent < 0){
+            throw new IllegalArgumentException("Tip cannot be lower that 0");
+        }
+            
+        this.tipPercent = tipPercent;
+    }
+    
     @Override
     public double calcTip(){
         
         return billAmt * tipPercent;
     }
-    public final void setBill(double billAmt) {
+    public final void setBillAmt() {
         if(billAmt < minBill) {
             throw new IllegalArgumentException(billEntryError);
         }
-        billAmt = billAmt;
+        this.billAmt = billAmt;
     }
 }

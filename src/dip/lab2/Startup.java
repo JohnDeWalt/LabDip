@@ -1,10 +1,5 @@
 package dip.lab2;
 
-// An useful import if you need it.
-import java.text.NumberFormat;
-// Another useful import if you need it.
-import javax.swing.JOptionPane;
-
 /**
  * Just a test class for input and output.
  *
@@ -21,7 +16,13 @@ import javax.swing.JOptionPane;
 public class Startup {
  
     public static void main(String[] args) {
+        //FoodServiceTipCalculator calc = new FoodServiceTipCalculator(50,.15);
+        BaggageServiceTipCalculator calc = new BaggageServiceTipCalculator(5,2.00);
         
+        TipService tipService = new TipService(calc);
+        double tip = tipService.calcTip();
+        
+        System.out.println("The tip is " + tip);
         
     }
 
