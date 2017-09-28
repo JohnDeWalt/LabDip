@@ -16,8 +16,8 @@ package dip.lab2;
 public class Startup {
  
     public static void main(String[] args) {
-        //FoodServiceTipCalculator calc = new FoodServiceTipCalculator(50,.15);
-        BaggageServiceTipCalculator calc = new BaggageServiceTipCalculator(5,2.00);
+        FoodServiceTipCalculator calc = new FoodServiceTipCalculator(50,.15);
+        //BaggageServiceTipCalculator calc = new BaggageServiceTipCalculator(5,1.00);
         
         TipService tipService = new TipService(calc);
         double tip = tipService.calcTip();

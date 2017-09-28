@@ -9,17 +9,13 @@ package dip.lab2;
  * @author your name goes here
  */
 public class BaggageServiceTipCalculator implements TipCalculator {
-//    private double minBill = 0.00;
-//    private double maxBill = 100.00;
-//    private String billEntryError = "Error: bill must be between " + minBill + " and "+ maxBill;
-  
     private double baseTipPerBag;
     private int bagCount;
 
     public BaggageServiceTipCalculator( int bagCount, double baseTipPerBag) {
-         // perform validation
-        this.setBagCount(bagCount);
-        baseTipPerBag = 1.00; // set default value
+  
+        this.bagCount = bagCount;
+        this.baseTipPerBag = baseTipPerBag; 
     }
     @Override
     public double calcTip(){
@@ -43,9 +39,9 @@ public class BaggageServiceTipCalculator implements TipCalculator {
     }
 
     public void setBaseTipPerBag(double baseTipPerBag) {
-        if(baseTipPerBag < 1.00) {
+        if(baseTipPerBag < 0) {
             throw new IllegalArgumentException(
-                    "error: base tip must be greater than or equal to 1.00");
+                    "error: base tip must be greater than or equal to 0");
         }
         this.baseTipPerBag = baseTipPerBag;
     }
