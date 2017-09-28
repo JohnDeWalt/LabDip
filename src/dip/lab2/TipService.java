@@ -10,5 +10,22 @@ package dip.lab2;
  * @author Jackie
  */
 public class TipService {
-   
+    
+   private TipCalculator calc;
+
+    public TipService(TipCalculator calc) {
+        this.calc = calc;
+    }
+    
+    public double calcTip(){
+       return calc.calcTip();
+    }
+
+    public TipCalculator getCalc() {
+        return calc;
+    }
+
+    public void setClac(TipCalculator calc) {
+        this.calc = calc;
+    }
 }

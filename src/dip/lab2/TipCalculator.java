@@ -10,6 +10,7 @@ package dip.lab2;
  * @author Jackie
  */
 public interface TipCalculator {
+    
     public abstract double calcTip();
     
 }
