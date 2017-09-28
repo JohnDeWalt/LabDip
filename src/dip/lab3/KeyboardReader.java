@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package dip.lab3;
+import java.util.Scanner;
 
 /**
  *
@@ -11,5 +12,13 @@ package dip.lab3;
  */
 //would implement Input
 public class KeyboardReader {
+    
+    public String keyRead(){
+        System.out.println("What is your favorite color: ");
+        
+        Scanner input = new Scanner(System.in);
+        return input.nextLine();
+        
+    }
     
 }
