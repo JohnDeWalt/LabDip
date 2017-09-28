@@ -38,7 +38,7 @@ public class FoodServiceTipCalculator implements TipCalculator {
         
         return billAmt * tipPercent;
     }
-    public final void setBillAmt() {
+    public void setBillAmt() {
         if(billAmt <= 0) {
             throw new IllegalArgumentException("You cant have a bill that is equal to or lower that 0!");
         }
