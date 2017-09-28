@@ -9,9 +9,9 @@ package dip.lab2;
  * @author your name goes here
  */
 public class FoodServiceTipCalculator implements TipCalculator {
-    private double minBill = 0.00;
-    private String billEntryError =
-            "Error: bill must be greater than or equal to " + minBill;
+//    private double minBill = 0.00;
+//    private String billEntryError =
+//            "Error: bill must be greater than or equal to " + minBill;
     private double billAmt;
     private double tipPercent;
     
@@ -40,8 +40,8 @@ public class FoodServiceTipCalculator implements TipCalculator {
         return billAmt * tipPercent;
     }
     public final void setBillAmt() {
-        if(billAmt < minBill) {
-            throw new IllegalArgumentException(billEntryError);
+        if(billAmt <= 0) {
+            throw new IllegalArgumentException("You cant have a bill that is equal to or lower that 0!");
         }
         this.billAmt = billAmt;
     }
