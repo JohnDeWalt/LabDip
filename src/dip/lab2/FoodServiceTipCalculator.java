@@ -33,7 +33,6 @@ public class FoodServiceTipCalculator implements TipCalculator {
             
         this.tipPercent = tipPercent;
     }
-    
     @Override
     public double calcTip(){
         
