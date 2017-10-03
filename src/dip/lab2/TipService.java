@@ -26,7 +26,9 @@ public class TipService {
     }
 
     public void setClac(TipCalculator calc) {
-        
+        if (calc == null){
+             throw new NullPointerException();
+        }
         this.calc = calc;
     }
 }

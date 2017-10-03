@@ -12,8 +12,8 @@ public class FoodServiceTipCalculator implements TipCalculator {
 //    private double minBill = 0.00;
 //    private String billEntryError =
 //            "Error: bill must be greater than or equal to " + minBill;
-    private double billAmt;
-    private double tipPercent;
+    private  double billAmt;
+    private  double tipPercent;
     
 
     public FoodServiceTipCalculator( double billAmt, double tipPercent) {
