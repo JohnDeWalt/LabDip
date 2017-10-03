@@ -26,7 +26,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
     public final int getBagCount() {
         return bagCount;
     }
-    public void setBagCount(int bagCount) {
+    public final void setBagCount(int bagCount) {
         if(bagCount < 0) {
             throw new IllegalArgumentException(
                     "bag count must be greater than or equal to zero");
