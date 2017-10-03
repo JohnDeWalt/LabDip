@@ -10,6 +10,7 @@ package dip.lab3;
  * @author Jackie
  */
 public class MessageCopier {
+    
     private MessageInput input;
     private MessageOutput output;
 
